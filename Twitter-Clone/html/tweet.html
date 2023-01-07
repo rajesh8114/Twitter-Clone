@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset=" TF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Twitter clone</title>
+    <link rel="shortcut icon" href="../img/twitter-icon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/tweet.css" />
+  </head>
+  <body>
+    <!-- -----------main page------------ -->
+    <section class="main_page">
+      <div class="left">
+        <div class="left_content">
+          <div>
+            <i class="fa fa-search"></i>
+            <h3 class="left_content_heading">Find Your Interest</h3>
+          </div>
+          <div>
+            <i class="fa fa-user"></i>
+            <h3 class="left_content_heading">
+              Explore what people are talking about
+            </h3>
+          </div>
+          <div>
+            <i class="fa fa-comment"></i>
+            <h3 class="left_content_heading">Join the people</h3>
+          </div>
+        </div>
+      </div>
+      <!-- -------------end of left -------------------- -->
+      <div class="right">
+        <div class="right_content">
+          <form class="right_content_form">
+            <input
+              type="text"
+              class="user_info"
+              placeholder="Phone, email, or username"
+            />
+            <div>
+              <input type="password" class="password" placeholder="Password" />
+              <label>Forget Password?</label>
+            </div>
+            <button type="button" class="top_btn">Log in</button>
+          </form>
+          <div class="middle_content">
+            <i class="fa-brands fa-twitter"></i>
+            <h1>Explore what's happening in the world</h1>
+            <h4>Join Twitter today</h4>
+            <button type="button" class="signup_btn main_btn">Sign Up</button>
+            <button type="button" class="login_btn main_btn">Log in</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ----footer--- -->
+      <footer class="main_page_footer">
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Apps</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Status</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Brand</a></li>
+          <li><a href="#">Developers</a></li>
+          <li><a href="#">&copy; 2022 Twitter_clone</a></li>
+        </ul>
+      </footer>
+    </section>
+    <!-- end of main page -->
+
+    <!-- login page -->
+    <section class="login_page">
+      <nav class="login_page_nav">
+        <ul>
+          <li>
+            <a href="#"><i class="fa-brands fa-twitter"> </i> Home</a>
+          </li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Language: English</a></li>
+        </ul>
+      </nav>
+      <div class="login">
+        <div class="login_content">
+          <h2>Log In To Twitter</h2>
+          <form class="login_form">
+            <input
+              type="text"
+              class="login_user_info"
+              placeholder="Phone, Email, or Username"
+            />
+            <input
+              type="password"
+              class="login_password"
+              placeholder="Password"
+            />
+            <div>
+              <button type="button  " class="login_form_btn">Log In</button>
+              <input type="checkbox" class="login_form_checkbox" id="check" />
+              <label for="check">Remember Me</label>
+              <a href="#">Forget Password?</a>
+            </div>
+          </form>
+        </div>
+        <footer class="login_footer">
+          <p>New To Twitter? <a href="#">Sign Up Now</a></p>
+          <p>
+            Already using Twitter via text message?
+            <a href="#">Activate your account</a>
+          </p>
+        </footer>
+      </div>
+    </section>
+
+    <!-- login modal -->
+
+    <div class="login_modal">
+      <i class="fa fa-times"></i>
+      <p>
+        The usename and password you entered did not match our records. please
+        double check and try again.
+      </p>
+    </div>
+
+    <!--end of login modal -->
+
+    <!-- news feed page -->
+
+    <section class="feeds_page dark_mode2">
+      <aside class="feeds_nav dark_mode1 border">
+        <a href="#" class="dove"><i class="fa-brands fa-twitter"></i></a>
+        <div class="icons">
+          <a href="#" class="active">
+            <i class="fa fa-home light_text"></i>
+            <p class="light_text">Home</p>
+          </a>
+          <a href="#"
+            ><i class="fa fa-hashtag light_text"></i>
+            <p class="light_text">Explore</p>
+          </a>
+          <a href="#"
+            ><i class="fa fa-bell light_text"></i>
+            <p class="light_text">Notifiaction</p></a
+          >
+          <a href="#"
+            ><i class="fa fa-envelope light_text"></i>
+            <p class="light_text">Messages</p></a
+          >
+          <a href="#"
+            ><i class="fa-regular fa-bookmark light_text"></i>
+            <p class="light_text">Bookmarks</p></a
+          >
+          <a href="#"
+            ><i class="fa-solid fa-clipboard-list light_text"></i>
+            <p class="light_text">Lists</p></a
+          >
+          <a href="#" id="profile"
+            ><i class="fa-regular fa-user light_text"></i>
+            <p class="light_text">Profile</p></a
+          >
+          <a href="#" id="more"
+            ><i class="fa-solid fa-ellipsis light_text"></i>
+            <p class="light_text">More</p></a
+          >
+        </div>
+        <!-- ---post button--- -->
+
+        <button type="button" class="post_btn">Tweet</button>
+        <!-- <div class="search_bar">
+          <i class="fa fa-search"></i>
+          <input
+            type="text"
+            placeholder="Search Twitter"
+            class="search_bar_input dark_mode2 light_text border"
+          />
+        </div> -->
+
+        <div class="user">
+          <div class="user_img_wrapper">
+            <img
+              src="../img/rajesh.jpg"
+              alt="user image"
+            />
+          </div>
+          <a href="#" class="user_link light_text"
+            ><p>Suhana</p>
+            <span>@suhana12</span><i class="fa-solid fa-ellipsis light_text"></i
+          ></a>
+        </div>
+      </aside>
+      <div class="feeds_content dark_mode2">
+        <div class="feeds_header dark_mode1">
+          <div class="header_top dark_mode1 border">
+            <h4 class="light_text">Home</h4>
+            <!-- <i class="fa-regular fa-star"></i> -->
+            <img src="../img/stars.svg" alt="" width="25" />
+          </div>
+
+          <div class="header_post dark_mode1 border">
+            <div class="header_img_wrapper">
+              <img
+              src="../img/rajesh.jpg"
+              alt="user image"
+            />
+              <textarea
+                name=""
+                id=""
+                placeholder="What's happening?"
+                class="textarea light_text border"
+              ></textarea>
+            </div>
+            <div class="bottom border">
+              <div class="icons">
+                <i class="fa fa-image"></i>
+                <i class="fa-solid fa-list-ul"></i>
+                <i class="fa-regular fa-face-smile"></i>
+                <i class="fa-regular fa-calendar-days"></i>
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <button type="button">Tweet</button>
+            </div>
+          </div>
+        </div>
+        <div class="posts dark_mode1">
+          <div class="maincontainer">
+          </div>
+
+         
+              </div>
+              <div class="post_icons">
+                <i class="fa fa-comment"></i>
+                <i class="fa fa-retweet"></i>
+                <i class="fa fa-heart"></i>
+                <i class="fa fa-share-alt"></i>
+              </div>
+            </div>
+          </div> 
+        </div>
+
+        <div class="follow dark_mode1">
+          <h3 class="follow_heading light_text border">Who to follow</h3>
+          <div class="follow_users border">
+            <div class="follow_user_img">
+              <img
+                src="https://images.unsplash.com/photo-1547147607-6eab7b49f3ee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjg3fHxwZXJzb258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt="follow"
+                width="40px"
+              />
+            </div>
+            <div class="follow_user_info light_text">
+              <h4>Anna Smith</h4>
+              <p>@annasmith</p>
+            </div>
+            <button type="button" class="follow_btn dark_mode2">Follow</button>
+          </div>
+
+          <div class="follow_users border">
+            <div class="follow_user_img">
+              <img
+                src="https://images.unsplash.com/photo-1608668648240-eab177307a4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDQ4fHxwZXJzb258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt="follow"
+                width="40px"
+              />
+            </div>
+            <div class="follow_user_info light_text">
+              <h4>Anna Smith</h4>
+              <p>@annasmith</p>
+            </div>
+            <button type="button" class="follow_btn dark_mode2">Follow</button>
+          </div>
+
+          <div class="follow_users border">
+            <div class="follow_user_img">
+              <img
+                src="https://images.unsplash.com/photo-1542206395-9feb3edaa68d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                alt="follow"
+                width="40px"
+              />
+            </div>
+            <div class="follow_user_info light_text">
+              <h4>Anna Smith</h4>
+              <p>@annasmith</p>
+            </div>
+            <button type="button" class="follow_btn dark_mode2">Follow</button>
+          </div>
+
+          <div class="follow_users border">
+            <div class="follow_user_img">
+              <img
+                src="https://images.unsplash.com/photo-1547624643-3bf761b09502?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDI3fHxwZXJzb258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt="follow"
+              />
+            </div>
+            <div class="follow_user_info light_text">
+              <h4>Anna Smith</h4>
+              <p>@annasmith</p>
+            </div>
+            <button type="button" class="follow_btn dark_mode2">Follow</button>
+          </div>
+
+          <div class="follow_link">
+            <a href="#">Show more</a>
+          </div>
+
+          <footer class="follow_footer dark_mode2">
+            <ul>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cookies</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">More</a></li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+
+      <!-- post modal -->
+
+      <div class="modal_wrapper">
+        <div class="modal dark_mode1">
+          <div class="modal_header border">
+            <i class="fa fa-times"></i>
+            <button type="button">Tweet</button>
+          </div>
+          <div class="modal_body">
+            <div class="modal_img">
+              <img
+              src="../img/rajesh.jpg"
+              alt="user"
+            />
+            </div>
+            <input
+              type="text"
+              placeholder="What's happening?"
+              class="modal_input dark_mode2 light_text border"
+            />
+            <i class="fa fa-smile"></i>
+          </div>
+          <div class="modal_footer">
+            <div class="modal_icons">
+              <i class="fa fa-image"></i>
+              <i class="fa fa-camera"></i>
+              <i class="fa fa-chart-bar"></i>
+              <span>+</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- sidebar -->
+
+      <div class="sidebar_wrapper">
+        <div class="sidebar dark_mode1">
+          <div class="sidebar_header border">
+            <h2 class="light_text">Account Info</h2>
+            <i class="fa fa-times"></i>
+          </div>
+          <div class="sidebar_user">
+            <div class="sidebar_user_img">
+              <img
+               src="/img/rajesh.jpg"
+              />
+            </div>
+            <span>+</span>
+          </div>
+          <div class="sidebar_user_info light_text">
+            <h4>Rajesh</h4>
+            <p>kushwaharajesh187</p>
+          </div>
+          <div class="followings light_text">
+            <p class="following_paragraph"><span>500</span>Following</p>
+            <p class="following_paragraph"><span>10k</span>Following</p>
+          </div>
+          <div class="sidebar_list1 border">
+            <ul>
+              <li>
+                <a href="#"><i class="fa fa-user"></i> Profile</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-list-alt"></i> Lists</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-rectangle-ad"></i> Ads</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-chart-line"></i> Analytics</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- settings -->
+
+      <div class="settigs_wrapper dark_mode1">
+        <div class="sidebar_list2">
+          <i class="fa fa-times light_text"></i>
+          <ul>
+            <li>
+              <a href="#"><p class="light_text">Settings and Privacy</p></a>
+            </li>
+            <li>
+              <a href="#"><p class="light_text">Help Center</p></a>
+            </li>
+            <li>
+              <a href="#"><p class="light_text">Log Out</p></a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- darkmode -->
+        <div class="dark_mode">
+          <p><span class="light_text">Dark Mode</span></p>
+          <div class="toggle">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- end of sidebar -->
+    </section>
+    <script src="../js/index.js"></script>
+    </body>
+</html>
